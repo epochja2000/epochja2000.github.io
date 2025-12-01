@@ -1,0 +1,41 @@
+body {
+    background-color: #0f0f0f;
+    color: white;
+    font-family: Sans;
+    text-align: center;
+}
+
+.title {
+    font-size: 41px;
+}
+
+img {
+    width: 200px;
+}
+
+.container {
+    justify-content: center;
+    display: flex;
+    border: 2px white solid;
+    padding: 12px;
+    width: 200px;
+    margin: auto;
+    flex-direction: column;
+}
+
+audio {
+    width: 300px;
+    height: 40px;
+    margin: 20px;
+
+}
+
+a {
+    color: white;
+    display: block;
+}
+
+@font-face {
+    font-family: sans;
+    src: url(Sans.ttf)
+}
