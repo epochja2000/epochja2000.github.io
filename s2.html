@@ -11,7 +11,16 @@
     <div class="container">
     <a href="s1.html"><img src="ablackmiletothesurface.jpg"></a>
     </div>
-    <audio controls src="TheAlien.flac"></audio>
-    <a href="TheAlien.flac" download="">Download .flac</a>
+    <div class="buttons">
+    <button id="playpause" onclick="playpause()""><img src="play.svg"></button>
+    <a href="TheAlien.flac" download><button id="btn"><img src="down.svg"></button></a>
+    </div>
+    <audio id="audio" controls src="TheAlien.flac"></audio>
+    <script>
+        function playpause() {
+            let song = document.getElementById("audio");
+            song.paused? song.play() : song.pause();
+        }
+    </script>
 </body>
 </html>

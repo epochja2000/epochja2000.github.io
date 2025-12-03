@@ -11,7 +11,16 @@
     <div class="container">
     <a href="s1.html"><img src="thenewabnormal.png"></a>
     </div>
-    <audio controls src="TheAdultsAreTalking.flac"></audio>
-    <a href="TheAdultsAreTalking.flac" download="">Download .flac</a>
+    <div class="buttons">
+    <button id="playpause" onclick="playpause()"><img src="play.svg"></button>
+    <a href="TheAdultsAreTalking.flac" download><button id="btn"><img src="down.svg"></button></a>
+    </div>
+    <audio id="audio" src="TheAdultsAreTalking.flac"></audio>
+    <script>
+        function playpause() {
+            let song = document.getElementById("audio");
+            song.paused? song.play() : song.pause();
+        }
+    </script>
 </body>
 </html>
