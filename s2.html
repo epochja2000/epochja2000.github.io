@@ -12,14 +12,16 @@
     <a href="s1.html"><img src="ablackmiletothesurface.jpg"></a>
     </div>
     <div class="buttons">
-    <button id="playpause" onclick="playpause()""><img src="play.svg"></button>
+    <button id="playpause" onclick="playpause()"><img src="play.svg" id="picon"></button>
     <a href="TheAlien.flac" download><button id="btn"><img src="down.svg"></button></a>
     </div>
     <audio id="audio" controls src="TheAlien.flac"></audio>
     <script>
         function playpause() {
+            let icon = document.getElementById("picon")
             let song = document.getElementById("audio");
             song.paused? song.play() : song.pause();
+            song.paused? icon.src = "play.svg" : icon.src = "pause.svg";
         }
     </script>
 </body>
